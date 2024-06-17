@@ -1,17 +1,20 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Collections;
+import java.util.Comparator;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        PhoneBook phoneBook=new PhoneBook();
+        phoneBook.add("Ivanov",123);
+        phoneBook.add("Petrov",456);
+        phoneBook.add("Ivanov",345);
+        phoneBook.add("Sidorov",274);
+        phoneBook.add("Ivanov",789);
+        phoneBook.add("Petrov",567);
+        phoneBook.add("Ivanov",678);
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        System.out.println(phoneBook.find("Ivanov"));
+        phoneBook.print();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+
     }
 }
